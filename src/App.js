@@ -5,12 +5,17 @@ import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
 
   const routeElement = useRoutes([
     {
       path: '/',
+      element: <Home />
+    },
+    {
+      path: '/products',
       element: <Products />
     },
     {
@@ -24,7 +29,8 @@ function App() {
     {
       path: '*',
       element: <NotFound />
-    }
+    },
+    
   ]);
   return (
     <div className="App">
