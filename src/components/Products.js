@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect, useRef} from "react";
 import ProductCard from "./ProductCard";
 function Products(){
     const [products, setProducts] = useState([]);
@@ -6,6 +6,13 @@ function Products(){
     const [error, setError] = useState(false);
     const [search, setSearch] = useState('');
 
+    const searchInputRef = useRef(null);
+
+
+    useEffect(() => {
+        searchInputRef.current.focus();
+    }, []);
+    
     useEffect(() => {
         fetch('https://dummyjson.com/products')
         .then(response => {
@@ -29,8 +36,9 @@ function Products(){
 );
     return (
         <>
-
-        <input type="text" placeholder="Search products..."
+        <input 
+        ref={searchInputRef}
+        type="text" placeholder="Search products..."
         value={search} onChange={(e) => setSearch(e.target.value)} 
         />
         {
