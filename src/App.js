@@ -1,9 +1,10 @@
 import './App.css';
 import Products from './components/Products';
-import { useRoutes, Link } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -27,9 +28,7 @@ function App() {
   ]);
   return (
     <div className="App">
-      <Link to="/">Products</Link>
-      {' | '}
-      <Link to="/cart">Cart</Link>
+      <Navbar />
       {routeElement}
     </div>
   );
