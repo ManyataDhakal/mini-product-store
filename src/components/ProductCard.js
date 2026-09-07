@@ -1,29 +1,37 @@
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-function ProductCard(props){
-    const { product } = props;
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+function ProductCard(props) {
+  const { product } = props;
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const addToCartHandler = () => {
-        dispatch({
-            type: 'ADD_TO_CART',
-            payLoad: product
-        });
-    }
-    return(
-        <div>
+  const addToCartHandler = () => {
+    dispatch({
+      type: "ADD_TO_CART",
+      payLoad: product,
+    });
+  };
+  return (
+    <div className="product-card">
+      <div className="product-image">
         <img src={product.thumbnail} alt={product.title} />
-        <h3>{product.title}</h3>
-        <p>Category: {product.category}</p>
-        <p>Price: ${product.price}</p>
+      </div>
 
-        <Link to={`/product/${product.id}`}>
+      <div className="product-info">
+        <p className="product-category">{product.category}</p>
+        <h3>{product.title}</h3>
+        <p className="product-price">${product.price}</p>
+
+        <div className="product-actions">
+          <Link to={`/product/${product.id}`} className="details-btn">
             View Details
-        </Link>
-        <button onClick={addToCartHandler}>Add to Cart
-        </button>
+          </Link>
+          <button className="cart-btn" onClick={addToCartHandler}>
+            Add to Cart
+          </button>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 export default ProductCard;

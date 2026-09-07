@@ -20,7 +20,7 @@ function ProductDetail() {
     <div>
       <h2>Product Detail</h2>
       <p>Product ID: {id}</p>
-      <Link to="/">Back to Products</Link>
+      <Link to="/products">Back to Products</Link>
     </div>
   );
 }
