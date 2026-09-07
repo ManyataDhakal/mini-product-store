@@ -70,3 +70,79 @@ body {
 .nav-links a:hover {
   color: var(--primary);
 }
+
+/* HOME STYLING */
+
+.hero {
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  display: block;
+}
+
+.hero-label {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1{
+  max-width: 750px;
+  font-size: 3.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem; 
+}
+
+.hero-content h1 span {
+  color: var(--primary);
+}
+
+.hero-description {
+  max-width: 650px;
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.shop-btn {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: var(--primary-dark);
+}
+
