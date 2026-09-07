@@ -12,7 +12,9 @@ function Navbar() {
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
-          <Link to="/cart">Cart ({cart.length})</Link>
+          <Link to="/cart" className="cart-link">
+          <i className="fa-solid fa-cart-shopping"></i>
+          <span className="cart-badge">{cart.length}</span></Link>
         </div>
       </div>
     </div>
