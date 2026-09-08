@@ -109,7 +109,8 @@ mini-product-store/
 ├── .gitignore
 ├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+└── vercel.json
 ```
 
 ## 🚀 Getting Started
