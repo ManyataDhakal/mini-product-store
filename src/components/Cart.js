@@ -5,12 +5,14 @@ function Cart() {
 
   const dispatch = useDispatch();
 
+  //Calculate the total price of all products in the cart
   const total = useMemo(() => {
     return cart.reduce((sum, cartItem) => {
       return sum + cartItem.price;
     }, 0);
   }, [cart]);
 
+  // Remove the selected product from the cart
   const removeHandler = (index) => {
     dispatch({
       type: "REMOVE_FROM_CART",

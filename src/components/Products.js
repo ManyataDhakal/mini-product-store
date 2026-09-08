@@ -8,10 +8,12 @@ function Products() {
 
   const searchInputRef = useRef(null);
 
+  // Focus the search input when the page loads
   useEffect(() => {
     searchInputRef.current.focus();
   }, []);
 
+  // Fetch product data from the DummyJSON API
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((response) => {
@@ -30,6 +32,7 @@ function Products() {
       });
   }, []);
 
+  // Filter products based on the user's search input
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase().trim()),
   );

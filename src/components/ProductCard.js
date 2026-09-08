@@ -5,6 +5,7 @@ function ProductCard(props) {
 
   const dispatch = useDispatch();
 
+  // Dispatch the selected product to the Redux shopping cart
   const addToCartHandler = () => {
     dispatch({
       type: "ADD_TO_CART",

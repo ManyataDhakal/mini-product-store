@@ -1,11 +1,13 @@
 import { createStore } from 'redux';
 
+// Define the initial Redux state
 const initData = {
     cart: []
 };
 
 const reducer = (state = initData, action) => {
 
+    // Add a product to the shopping cart
     if(action.type === 'ADD_TO_CART'){
         return {
             ...state,
@@ -13,6 +15,7 @@ const reducer = (state = initData, action) => {
         };
     }
 
+    // Remove a product from the cart using its index
     if (action.type === 'REMOVE_FROM_CART') {
         return {
             ...state,

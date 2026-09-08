@@ -2,9 +2,12 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function ProductDetail() {
+
+  // Get the product ID from the URL
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
+  // Fetch the selected product details using its ID
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${id}`)
       .then((response) => response.json())

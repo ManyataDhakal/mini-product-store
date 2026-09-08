@@ -9,6 +9,7 @@ import Home from './components/Home';
 
 function App() {
 
+  // Define application routes using React Router
   const routeElement = useRoutes([
     {
       path: '/',
