@@ -1,9 +1,10 @@
 # 🛍️ MiniStore
 MiniStore is a React-based product browsing and shopping cart application built as part of my Weeks 1-14 React assessment. The project demonstrates core Reach concepts such as reusable components, React Hooks, client-side routing, API integration, and state management with Redux. Users can browse products fetched from the DummyJSON API, search and filter products, view detailed information about individual products, and, add and remove items from the shopping cart. The application also calculates the total price and includes loading, error, and 404 page handling.
 
+## 🌐 Live Demo
+[View Live MiniStore](https://mini-product-store-one.vercel.app/)
 
 ## 📸 Project Preview
-
 ![MiniStore Home Page](./screenshots/home.png)
 
 ## ✨ Features
